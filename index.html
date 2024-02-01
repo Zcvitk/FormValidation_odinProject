@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&family=Ultra&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./style.css">
+    <title>Form validation</title>
+</head>
+<body>
+    <form 
+     id="form" novalidate>
+        <h1>Form validation</h1>
+        <br>
+        <label for="fullname">Full name</label>
+        <input type="text" inputmode="text" name="fullname" id="fullname"
+        placeholder="Your full name" required minlength="3" maxlength="35"
+        enterkeyhint="next" autocomplete="off"/>
+        <span class="error-message" aria aria-live="polite"></span>
+        
+        <label for="email">e-mail</label>
+        <input type="email" name="email" id="email"
+        placeholder="example@mail.com" required
+        enterkeyhint="next" autocomplete="off"/>
+        <span class="error-message" aria aria-live="polite"></span>
+    
+        <label for="adress">Adress</label>
+        <input type="text" name="adress" id="adress"
+        placeholder="Your adress" required minlength="5"
+        enterkeyhint="next" autocomplete="off"/>
+        <span class="error-message" aria aria-live="polite"></span>
+    
+        <label for="city">City</label>
+        <input type="text" name="city" id="city"
+        placeholder="City" required minlength="2"
+        enterkeyhint="next" autocomplete="off"/>
+        <span class="error-message" aria aria-live="polite"></span>
+    
+        <label for="zipcode">Zip code</label>
+        <input type="text" name="zipcode" id="zipcode"
+        placeholder="Zip code" required pattern="\d\d\d\d\d"
+        enterkeyhint="next" autocomplete="off"/>
+        <span class="error-message" aria aria-live="polite"></span>
+
+        <label for="state">State</label>
+        <input type="text" name="state" id="state"
+        placeholder="State" required minlength="2"
+        enterkeyhint="next" autocomplete="off"/>
+        <span class="error-message" aria aria-live="polite"></span>
+    
+        <label for="phoneNumber">Phone number</label>
+        <input type="number" name="phoneNumber" id="phoneNumber"
+        pattern="[0-9]" minlength="5"
+        placeholder="Phone number" required
+        enterkeyhint="next" autocomplete="off"/>
+        <span class="error-message" aria aria-live="polite"></span>
+   
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password"
+        placeholder="Enter password" required
+        enterkeyhint="next" autocomplete="off" minlength="6"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*]).{6,20}"
+        />
+        <span class="error-message" aria aria-live="polite"></span>
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="text" name="confirmPassword" id="confirmPassword"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*]).{6,20}"
+        placeholder="Enter password again" required minlength="6"
+        enterkeyhint="next" autocomplete="off"
+        />
+        <span class="error-message" aria aria-live="polite"></span>
+        
+        <button class="submit" type="submit">Submit</button>
+        <button class="reset" type="reset">Reset</button>
+    </form>
+</body>
+<script src="./script.js"></script>
+</html>

@@ -1,0 +1,87 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: fixed;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 0%;
+    margin-bottom: 30%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+  }
+  
+  #form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: url('background_img.jpg');
+    background-repeat: round;
+    border-radius: 10px;
+    margin-top: 18%;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  ::placeholder {
+    color: black;
+    text-align: center;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+  }
+  
+  .error-message :active {
+    color: red;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  :invalid {
+    background-color: #e94c5b;
+  }
+
+  :valid {
+    background-color: #237cda;
+  }
+  .submit {
+    background-color: #28a745;
+  }
+  
+  .reset {
+    background-color: #dc3545;
+  }
+
